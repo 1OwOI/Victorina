@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Victorina.Pages.QuizPage"
+             Title="Вопросы">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20" Background="DodgerBlue">
+            <Label x:Name="QuestionLabel" FontSize="20" FontAttributes="Bold"/>
+
+            <VerticalStackLayout x:Name="OptionsLayout" Spacing="20"/>
+
+            <VerticalStackLayout x:Name="InputLayout" Spacing="20"
+                                 IsVisible="False">
+                <Entry x:Name="AnswerEntry"
+                       Placeholder="Введите ответ..."
+                       FontSize="18"/>
+                <Button Text="Ответить" Background="DarkBlue"
+                        Clicked="OnSubmitTextClicked"
+                        HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+            
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
